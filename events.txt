@@ -1,0 +1,51 @@
+Move in for International Students;Vanbrugh College;;1411722000;1411743600;International Students can move in between 10:00 and 16:00 today.
+International Welcome Barbecue;Vanbrugh College;;1411756200;1411763400;A barbecue to welcome all the International Freshers to the college.
+Move into Barbara Scott Court;Barbara Scott Court;;1411808400;1411826400;Anyone moving into Barbara Scott Courts can do so between 10:00 and 17:00 today.
+Move into Donald Barron Court;Donald Barron Court;;1411808400;1411826400;Anyone moving into Donald Barron Courts can do so between 10:00 and 17:00 today.
+Move into Fairfax House;Fairfax House;;1411808400;1411826400;Anyone moving into Fairfax House can do so between 10:00 and 17:00 today.
+Dinner from Efes;Vanbrugh Dining Hall;;1411833600;1411837200;As there is no catering available at the weekend we will be getting takeaway dinner from Efes today for anyone who wishes to order in.
+Pub Quiz;Vanbrugh Dining Hall;;1411840800;1411848000;Lorem ipsum dolor sit amet...
+Move into Le Page Court;Le Page Court;;1411894800;1411866000;Anyone moving into Le Page Court or Eric Milner White Courts can do so between 10:00 and 17:00 today.
+Move into Eric Milner White Court;Eric Milner White Court;;1411894800;1411920000;Anyone moving into Le Page Court or Eric Milner White Courts can do so between 10:00 and 17:00 today.
+Dinner from Efes;Vanbrugh Dining Hall?;;1411920000;;As there is no catering available at the weekend we will be getting takeaway dinner from Efes today for anyone who wishes to order in.
+College Photo;Vanbrugh Paradise;;1411921800;;Lorem ipsum dolor sit amet...
+Welcome Talk;Central Hall;;1411923600;;Lorem ipsum dolor sit amet...
+Bar Crawl;Kuda Nightclub;;1411930800;;Wear your fresher's t-shirt and come along to the first of a marathon of club nights.
+Acoustic Chill Night;The Warren;;1411930800;;Come along to one Vanbrugh's trademark acoustic nights.
+Breakfast Club;Vanbrugh Dining Hall;;1411977600;;"Rise and shine, it's time for breakfast in Vanbrugh Dining Hall!"
+Tour of Campus;University of York;;1411984800;;"It's your home for at least the next three years, wouldn't it be a good idea to find your way around?"
+Vanbrugh Freshers Fair;Vanbrugh Dining Hall;;1411992000;;Come on down and see what Vanbrugh has to offer it's students.
+Dinner;Vanbrugh Dining Hall;;1412004600;;Don't forget to come and have your catered dinner with all the other exciting events going on! If you're self-catered you can still come down and buy some food.
+Ghost Tour;York City Centre;;1412017200;;"York is a very old city, and has a long history of supernatural sightings, come along on a ghost walk to hear some of these tales and maybe we'll even see one ourselves!"
+Bar Crawl;Mansion Nightclub;;1412017200;;A themed club night in Mansion
+Breakfast Club;Vanbrugh Dining Hall;;1412064000;;"Rise and shine, it's time for breakfast in Vanbrugh Dining Hall!"
+Tour of York;York City Centre;;1412071200;;
+Purple Paint Party;Vanbrugh Bowl;;1412082000;;
+Dinner;Vanbrugh Dining Hall;;1412094600;;Don't forget to come and have your catered dinner with all the other exciting events going on! If you're self-catered you can still come down and buy some food.
+York Student Cinema;P/X/001;;1412096400;;
+Club Night;Vanbrugh Dining Hall;;1412103600;;
+Breakfast Club;Vanbrugh Dining Hall;;1412150400;;"Rise and shine, it's time for breakfast in Vanbrugh Dining Hall!"
+Tea Party;Fairfax House;;1412157600;;
+Masterchef Competition;Vanbrugh JCR;;1412168400;;
+Dinner;Vanbrugh Dining Hall;;1412181000;;Don't forget to come and have your catered dinner with all the other exciting events going on! If you're self-catered you can still come down and buy some food.
+Bar Crawl;Club Salvation;;1412190000;;
+Rock 'n' Roll Bingo;V Bar;;1412190000;;
+Breakfast Club;Vanbrugh Dining Hall;;1412236800;;"Rise and shine, it's time for breakfast in Vanbrugh Dining Hall!"
+Sports Day;Vanbrugh Bowl;;1412251200;;
+Treasure Hunt;TBC?;;1412251200;;
+Dinner;Vanbrugh Dining Hall;;1412267400;;Don't forget to come and have your catered dinner with all the other exciting events going on! If you're self-catered you can still come down and buy some food.
+Swing Dance;Vanbrugh Dining Hall;;1412272800;;
+Pyjama/Onesie Party;Tokyo Nightclub;;1412276400;;
+Barry's;V Bar;;1412276400;;
+Breakfast Club;Vanbrugh Dining Hall;;1412323200;;"Rise and shine, it's time for breakfast in Vanbrugh Dining Hall!"
+Shopping Trip;York Designer Outlet?;;1412330400;;
+MathsSoc Drop-In;Vanbrugh JCR;;1412337600;;
+BodyShop/Lush Makeovers;TBC?;;1412344800;;
+Dinner;Vanbrugh Dining Hall;;1412350200;;Don't forget to come and have your catered dinner with all the other exciting events going on! If you're self-catered you can still come down and buy some food.
+Masquerade Ball;Roger Kirk Centre;;1412362800;;
+Board Game Night;The Warren;;1412362800;;
+YUSU Freshers Fair;University of York;;1412416800;;Go along to the YUSU Freshers Fair to meet and sign up to all the societies and sports teams you might want to get involved with this year.
+Cinema Trip;City Screen;;1412449200;;A trip to see a film at the City Screen Cinema off St. Helen's Square. Film tbc.
+YUSU Live & Loud;Heslington East Campus;;1412452800;;"The biggest campus night of the year. YUSU Live & Loud always promises some great music, food and drink."
+College Survivor's Photo;Vanbrugh Paradise;;1412510400;;WELL DONE! You made it to the end of the week. Come along to the Survivor's Photo to prove it till the end of time.
+YUSU Comedy Night;The Lounge;ComedyNight.png;1412496000;;The YUSU Comedy Night always promises some great, reknowned acts right here on campus. Don't forget to get your ticket on the YUSU website so you don't miss out!
