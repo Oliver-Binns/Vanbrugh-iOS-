@@ -1,7 +1,7 @@
-Fudge Kitchen;              Any slice of Fudge for £4. Only at Fudge Kitchen, York.
-GBK;                        A whopping 30% off food AND drinks at Gourmet Burget Kitchen, York.
-Gibsons;                    2 for £5 cocktails across the whole menu. Free 'Vanbrugh Cocktail' when you buy a meal. Only at Gibsons, York.
-Peony & Grey;               An exclusive 15% discount at Peony & Grey, 108 Fishergate, York.
-City Screen: Picturehouse;  Get student membership at Picturehouse: City Screen, York for just £10.
-ÜGOT;                       Get 20% off at ÜGOT, York Railway Station.
-Vudu;                       Get 2 for 1 cocktails, £2 bottles of beer and £1 shots all night Sunday-Thursday, Fridays until 12 and Saturdays until 10 at Vudu Lounge, York.
+Fudge Kitchen;Any slice of Fudge for £4. Only at Fudge Kitchen, York.
+GBK;A whopping 30% off food AND drinks at Gourmet Burget Kitchen, York.
+Gibsons;2 for £5 cocktails across the whole menu. Free 'Vanbrugh Cocktail' when you buy a meal. Only at Gibsons, York.
+Peony & Grey;An exclusive 15% discount at Peony & Grey, 108 Fishergate, York.
+City Screen: Picturehouse;Get student membership at Picturehouse: City Screen, York for just £10.
+ÜGOT;Get 20% off at ÜGOT, York Railway Station.
+Vudu;Get 2 for 1 cocktails, £2 bottles of beer and £1 shots all night Sunday-Thursday, Fridays until 12 and Saturdays until 10 at Vudu Lounge, York.

@@ -7,6 +7,7 @@
 //
 
 #import "DiscountsViewController.h"
+#import "DiscountDetailViewController.h"
 
 @interface DiscountsViewController ()
 
@@ -15,6 +16,7 @@
 @implementation DiscountsViewController
 
 NSArray *DiscountsArray;
+@synthesize tableView = _tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,11 +32,9 @@ NSArray *DiscountsArray;
     NSString *content = [self loadDiscounts];
     NSArray *arrayOfDiscountData = [content componentsSeparatedByString:@"\n"];
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    NSLog(@"%lu", (unsigned long)[arrayOfDiscountData count]);
     for(int i = 0; i < [arrayOfDiscountData count] - 1; i++){
         NSArray *DiscountDataArray = [[arrayOfDiscountData objectAtIndex:i] componentsSeparatedByString:@";"];
         [array addObject:DiscountDataArray];
-        NSLog(@"%@", [DiscountDataArray objectAtIndex:0]);
     }
     return array;
 }
@@ -51,7 +51,6 @@ NSArray *DiscountsArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	NSLog(@"%lu", [DiscountsArray count]);
 	return [DiscountsArray count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,14 +94,17 @@ NSArray *DiscountsArray;
 	[self performSegueWithIdentifier:@"ViewDiscount" sender:self];
 	return;
 }
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ViewDiscount"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DiscountDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.discountDetails = [DiscountsArray objectAtIndex:indexPath.row];
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

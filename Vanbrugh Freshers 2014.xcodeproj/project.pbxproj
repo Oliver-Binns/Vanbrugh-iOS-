@@ -42,6 +42,7 @@
 		A712580D1970133100C5CAA4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A712580C1970133100C5CAA4 /* OpenGLES.framework */; };
 		A712580F1970133B00C5CAA4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A712580E1970133B00C5CAA4 /* QuartzCore.framework */; };
 		A71258111970134500C5CAA4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71258101970134500C5CAA4 /* SystemConfiguration.framework */; };
+		A752891819FB0A5000A0BD3D /* DiscountDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A752891719FB0A5000A0BD3D /* DiscountDetailViewController.m */; };
 		A7729E11196C9D9A007AD4A8 /* disco.png in Resources */ = {isa = PBXBuildFile; fileRef = A7729E10196C9D9A007AD4A8 /* disco.png */; };
 		A7729E13196C9F1A007AD4A8 /* barquiz.png in Resources */ = {isa = PBXBuildFile; fileRef = A7729E12196C9F1A007AD4A8 /* barquiz.png */; };
 		A78E784919891B2400681333 /* AdrianHoran-OffCampus.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E784619891B2400681333 /* AdrianHoran-OffCampus.png */; };
@@ -138,6 +139,8 @@
 		A712580C1970133100C5CAA4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A712580E1970133B00C5CAA4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A71258101970134500C5CAA4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A752891619FB0A5000A0BD3D /* DiscountDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountDetailViewController.h; sourceTree = "<group>"; };
+		A752891719FB0A5000A0BD3D /* DiscountDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountDetailViewController.m; sourceTree = "<group>"; };
 		A7729E10196C9D9A007AD4A8 /* disco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disco.png; sourceTree = "<group>"; };
 		A7729E12196C9F1A007AD4A8 /* barquiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barquiz.png; sourceTree = "<group>"; };
 		A78E784619891B2400681333 /* AdrianHoran-OffCampus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AdrianHoran-OffCampus.png"; path = "images/STYCImages/AdrianHoran-OffCampus.png"; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				A796BEEC195C74B000A70D27 /* Event.h */,
 				A796BEED195C74B000A70D27 /* Event.m */,
 				A70ABA4A1945B9EA00D05DC4 /* Main.storyboard */,
+				A752891619FB0A5000A0BD3D /* DiscountDetailViewController.h */,
+				A752891719FB0A5000A0BD3D /* DiscountDetailViewController.m */,
 				A7079ED519FA91A400A6110F /* TemplateIcon2x.png */,
 				A7CB198819F9D1A5001879E1 /* DiscountsViewController.h */,
 				A7CB198919F9D1A5001879E1 /* DiscountsViewController.m */,
@@ -548,6 +553,7 @@
 				A707FC2419997B1E00875CA0 /* CircularLinkedList.m in Sources */,
 				A707FC271999807000875CA0 /* FAQViewController.m in Sources */,
 				A7CA5477196D60B800C44EF0 /* SOSViewController.m in Sources */,
+				A752891819FB0A5000A0BD3D /* DiscountDetailViewController.m in Sources */,
 				A70ABA4F1945B9EA00D05DC4 /* FirstViewController.m in Sources */,
 				A70ABA451945B9EA00D05DC4 /* main.m in Sources */,
 				A707FC2119997A6D00875CA0 /* FAQItem.m in Sources */,

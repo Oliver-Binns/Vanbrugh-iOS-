@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCY-JR-YmC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCY-JR-YmC">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -272,6 +272,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Discounts" image="Discounts" id="NNt-Sn-QM4"/>
                     <connections>
+                        <outlet property="tableView" destination="178-1H-tkB" id="aVJ-Z4-fAy"/>
                         <segue destination="UeZ-aS-bfN" kind="modal" identifier="ViewDiscount" modalTransitionStyle="crossDissolve" id="yiw-1W-03x"/>
                     </connections>
                 </viewController>
@@ -945,7 +946,7 @@
         <!--DiscountSpecificView-->
         <scene sceneID="Nuo-1H-CtT">
             <objects>
-                <viewController title="DiscountSpecificView" id="UeZ-aS-bfN" sceneMemberID="viewController">
+                <viewController title="DiscountSpecificView" id="UeZ-aS-bfN" customClass="DiscountDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="09r-gT-eyQ"/>
                         <viewControllerLayoutGuide type="bottom" id="O6n-03-QgU"/>
@@ -967,19 +968,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8YX-ce-x5E" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="l29-JM-8Yp"/>
+                                    <segue destination="8YX-ce-x5E" kind="modal" identifier="toDiscountsTab" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="l29-JM-8Yp"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMv-Kb-QOq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscountCard" translatesAutoresizingMaskIntoConstraints="NO" id="vMv-Kb-QOq">
                                 <rect key="frame" x="20" y="85" width="280" height="181"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vMv-Kb-QOq" secondAttribute="height" multiplier="17:11" id="TQZ-UV-KID"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69x-fL-4lN">
+                                <rect key="frame" x="20" y="286" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="69x-fL-4lN" firstAttribute="leading" secondItem="zAr-bw-zYU" secondAttribute="leading" constant="20" id="5GH-rv-mgt"/>
                             <constraint firstItem="O6n-03-QgU" firstAttribute="top" secondItem="wsf-aF-lRW" secondAttribute="bottom" constant="20" id="6Zg-ap-c6L"/>
                             <constraint firstAttribute="centerX" secondItem="QM7-CB-mhG" secondAttribute="centerX" id="EKw-4y-auO"/>
                             <constraint firstItem="QM7-CB-mhG" firstAttribute="bottom" secondItem="4Yv-wQ-MYw" secondAttribute="bottom" id="Gem-72-flf"/>
@@ -987,6 +995,7 @@
                             <constraint firstItem="vMv-Kb-QOq" firstAttribute="top" secondItem="4Yv-wQ-MYw" secondAttribute="bottom" constant="20" id="NTg-Yn-FBB"/>
                             <constraint firstItem="QM7-CB-mhG" firstAttribute="top" secondItem="zAr-bw-zYU" secondAttribute="topMargin" id="QNw-BE-1CP"/>
                             <constraint firstItem="O6n-03-QgU" firstAttribute="top" secondItem="wsf-aF-lRW" secondAttribute="bottom" constant="20" id="RWg-wB-ccE"/>
+                            <constraint firstAttribute="trailing" secondItem="69x-fL-4lN" secondAttribute="trailing" constant="20" id="aCV-Bq-c4M"/>
                             <constraint firstItem="4Yv-wQ-MYw" firstAttribute="top" secondItem="09r-gT-eyQ" secondAttribute="bottom" id="cQt-ON-2bH"/>
                             <constraint firstAttribute="trailing" secondItem="vMv-Kb-QOq" secondAttribute="trailing" constant="20" id="dUQ-JP-VLc"/>
                             <constraint firstItem="vMv-Kb-QOq" firstAttribute="leading" secondItem="zAr-bw-zYU" secondAttribute="leading" constant="20" id="hTX-tU-kHO"/>
@@ -994,10 +1003,15 @@
                             <constraint firstAttribute="centerX" secondItem="4Yv-wQ-MYw" secondAttribute="centerX" id="pM2-1N-ACU"/>
                             <constraint firstAttribute="width" secondItem="QM7-CB-mhG" secondAttribute="width" id="pg0-DW-VcE"/>
                             <constraint firstAttribute="width" secondItem="4Yv-wQ-MYw" secondAttribute="width" id="sHB-qB-hIV"/>
+                            <constraint firstItem="69x-fL-4lN" firstAttribute="top" secondItem="vMv-Kb-QOq" secondAttribute="bottom" constant="20" id="vNI-Tk-8US"/>
                             <constraint firstAttribute="trailing" secondItem="wsf-aF-lRW" secondAttribute="trailing" id="ziU-JS-kn6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="F.A.Q." image="FAQ" id="Syr-Ch-bqV"/>
+                    <connections>
+                        <outlet property="closeButton" destination="wsf-aF-lRW" id="P7z-P9-v1D"/>
+                        <outlet property="discountLabel" destination="69x-fL-4lN" id="Jdt-Kl-7be"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRU-bJ-I1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1007,6 +1021,7 @@
     <resources>
         <image name="CollegeLogo" width="250" height="135"/>
         <image name="CollegeLogo2.png" width="1275" height="178"/>
+        <image name="DiscountCard" width="280" height="175"/>
         <image name="Discounts" width="25" height="25"/>
         <image name="Events" width="30" height="30"/>
         <image name="FAQ" width="30" height="30"/>

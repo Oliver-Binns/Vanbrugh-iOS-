@@ -10,4 +10,6 @@
 
 @interface DiscountsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end
