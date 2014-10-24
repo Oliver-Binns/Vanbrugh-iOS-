@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCY-JR-YmC">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -249,7 +248,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="178-1H-tkB">
-                                <rect key="frame" x="0.0" y="65" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="G6K-qJ-wRB" id="Uqx-vl-f7w"/>
@@ -261,7 +260,7 @@
                         <constraints>
                             <constraint firstItem="q6N-rh-KsB" firstAttribute="top" secondItem="iPg-9d-jaq" secondAttribute="bottom" id="3c6-6h-BSZ"/>
                             <constraint firstItem="178-1H-tkB" firstAttribute="leading" secondItem="xwf-p8-k7k" secondAttribute="leading" id="5D0-jT-OvH"/>
-                            <constraint firstItem="xsZ-bL-CYE" firstAttribute="top" secondItem="178-1H-tkB" secondAttribute="bottom" constant="48" id="TKy-Ru-qc0"/>
+                            <constraint firstItem="xsZ-bL-CYE" firstAttribute="top" secondItem="178-1H-tkB" secondAttribute="bottom" id="TKy-Ru-qc0"/>
                             <constraint firstItem="96x-uS-ijN" firstAttribute="width" secondItem="xwf-p8-k7k" secondAttribute="width" id="X2f-g1-aU2"/>
                             <constraint firstAttribute="trailing" secondItem="q6N-rh-KsB" secondAttribute="trailing" id="ZRx-rw-riQ"/>
                             <constraint firstItem="96x-uS-ijN" firstAttribute="bottom" secondItem="q6N-rh-KsB" secondAttribute="bottom" id="aQT-6G-8Bv"/>
@@ -977,7 +976,7 @@
                                     <constraint firstAttribute="width" secondItem="vMv-Kb-QOq" secondAttribute="height" multiplier="17:11" id="TQZ-UV-KID"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69x-fL-4lN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69x-fL-4lN">
                                 <rect key="frame" x="20" y="286" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

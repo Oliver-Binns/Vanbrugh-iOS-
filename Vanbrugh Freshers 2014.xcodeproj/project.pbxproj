@@ -52,7 +52,6 @@
 		A796BEEE195C74B000A70D27 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A796BEED195C74B000A70D27 /* Event.m */; };
 		A7A00D7D199E572E0055C62F /* ComingSoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7A00D7B199E572E0055C62F /* ComingSoon.jpg */; };
 		A7A00D7E199E572E0055C62F /* ComingSoonSTYCs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7A00D7C199E572E0055C62F /* ComingSoonSTYCs.jpg */; };
-		A7B5816B19885054002FF4A0 /* OffCampus.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5816519885054002FF4A0 /* OffCampus.png */; };
 		A7B5816C19885054002FF4A0 /* FairfaxHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5816619885054002FF4A0 /* FairfaxHouse.png */; };
 		A7B5816E19885054002FF4A0 /* DonaldBarron.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5816819885054002FF4A0 /* DonaldBarron.png */; };
 		A7B5816F19885054002FF4A0 /* BarbaraScott.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B5816919885054002FF4A0 /* BarbaraScott.png */; };
@@ -151,7 +150,6 @@
 		A796BEED195C74B000A70D27 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		A7A00D7B199E572E0055C62F /* ComingSoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ComingSoon.jpg; path = images/PlaceholderImages/ComingSoon.jpg; sourceTree = "<group>"; };
 		A7A00D7C199E572E0055C62F /* ComingSoonSTYCs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ComingSoonSTYCs.jpg; path = images/PlaceholderImages/ComingSoonSTYCs.jpg; sourceTree = "<group>"; };
-		A7B5816519885054002FF4A0 /* OffCampus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OffCampus.png; path = images/BlockImages/OffCampus.png; sourceTree = "<group>"; };
 		A7B5816619885054002FF4A0 /* FairfaxHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FairfaxHouse.png; path = images/BlockImages/FairfaxHouse.png; sourceTree = "<group>"; };
 		A7B5816819885054002FF4A0 /* DonaldBarron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DonaldBarron.png; path = images/BlockImages/DonaldBarron.png; sourceTree = "<group>"; };
 		A7B5816919885054002FF4A0 /* BarbaraScott.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarbaraScott.png; path = images/BlockImages/BarbaraScott.png; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				A7C7AFEF1998C59A00407081 /* EricMilner.jpg */,
-				A7B5816519885054002FF4A0 /* OffCampus.png */,
 				A7B5816619885054002FF4A0 /* FairfaxHouse.png */,
 				A7B5816819885054002FF4A0 /* DonaldBarron.png */,
 				A7B5816919885054002FF4A0 /* BarbaraScott.png */,
@@ -512,7 +509,6 @@
 				A7FB0E2D199A8E86007453E6 /* arrow.png in Resources */,
 				A7A00D7E199E572E0055C62F /* ComingSoonSTYCs.jpg in Resources */,
 				A7C8C8F01986A8E4003249F6 /* HamishDudgeon-EricA.png in Resources */,
-				A7B5816B19885054002FF4A0 /* OffCampus.png in Resources */,
 				A7729E11196C9D9A007AD4A8 /* disco.png in Resources */,
 				A7C82692196E0E3100768451 /* dbbs.png in Resources */,
 				A78E784919891B2400681333 /* AdrianHoran-OffCampus.png in Resources */,
