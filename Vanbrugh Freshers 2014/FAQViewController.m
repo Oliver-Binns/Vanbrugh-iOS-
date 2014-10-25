@@ -28,15 +28,21 @@
 -(BOOL)hasFourInchDisplay{
     return ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
 }
+-(BOOL)iPhone6{
+    return ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 667) || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 736);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.faqTitleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
-    if(![self hasFourInchDisplay]){
-        self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:12];
+    if([self iPhone6]){ //iphone 6 or 6 plus
+        self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:16];
     }
-    else{
+    else if([self hasFourInchDisplay]){//iphone 5, 5c or 5s
         self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:14];
+    }
+    else{//iphone 4s
+        self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:12];
     }
     self.closeButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     /*if(![self hasFourInchDisplay]){

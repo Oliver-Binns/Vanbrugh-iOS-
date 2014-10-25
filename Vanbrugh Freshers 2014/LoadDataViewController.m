@@ -20,8 +20,10 @@
     
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
      ^ {
-         [self updateEvents];
-         [self updateFAQ];
+         [self updateFile:@"events.txt"];
+         [self updateFile:@"faq.txt"];
+         [self updateFile:@"discounts.txt"];
+         [self updateFile:@"news.txt"];
      });
     
     dispatch_group_notify(group, dispatch_get_main_queue(),
@@ -40,10 +42,10 @@
         [self performSegueWithIdentifier:@"goToPicker" sender:self];
     }
 }
--(void)updateFAQ{
+-(void)updateFile:(NSString *)text{
     NSError* e;
-    NSURL *textFile = [NSURL URLWithString:@"http://www.vanbrugh-college.co.uk/faq.txt"];
-    NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSASCIIStringEncoding error:&e];
+    NSURL *textFile = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.vanbrugh-college.co.uk/%@", text]];
+    NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSUTF8StringEncoding error:&e];
     if(e == nil){
         // For error information
         NSError *error;
@@ -53,30 +55,10 @@
         
         // Point to Document directory
         NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"faq.txt"];
+        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:text];
         // Write the file
         [str writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
     }
-    //Everything good
-}
--(void)updateEvents{
-    NSError* e;
-    NSURL *textFile = [NSURL URLWithString:@"http://www.vanbrugh-college.co.uk/events.txt"];
-    NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSASCIIStringEncoding error:&e];
-    if(e == nil){
-        // For error information
-        NSError *error;
-        
-        // Create file manager
-        //NSFileManager *fileMgr = [NSFileManager defaultManager];
-        
-        // Point to Document directory
-        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"events.txt"];
-        // Write the file
-        [str writeToFile:filePath atomically:YES encoding:NSASCIIStringEncoding error:&error];
-    }
-    //Everything good
 }
 
 - (void)didReceiveMemoryWarning {

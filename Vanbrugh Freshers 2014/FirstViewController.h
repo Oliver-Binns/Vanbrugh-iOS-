@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *changeBlockButton;
 @property (strong, nonatomic) IBOutlet UIButton *faqButton;
 @property (strong, nonatomic) IBOutlet UIButton *faqImage;
+@property (strong, nonatomic) IBOutlet UILabel *newsLabel;
 
 
 @property NSString *blockName;

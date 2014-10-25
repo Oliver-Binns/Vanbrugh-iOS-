@@ -26,6 +26,7 @@
 @synthesize scrollView = _scrollView;
 @synthesize contentView = _contentView;
 @synthesize faqImage = _faqImage;
+@synthesize newsLabel = _newsLabel;
 
 @synthesize blockName = _blockName;
 
@@ -78,6 +79,8 @@
     self.getDirectionsButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
 	self.faqImage.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:35];
     self.changeBlockButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    self.newsLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    [self newsLabelUpdate];
     self.faqButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     
     //reads what the block name is currently set to.
@@ -124,6 +127,9 @@
 		comingSoon.image = [UIImage imageNamed:@"ComingSoon.jpg"];
 		[self.contentView addSubview:comingSoon];*/
 	}
+}
+-(void)newsLabelUpdate{
+    self.newsLabel.text = @"Welcome to the new Vanbrugh College app.\n\nYou can access information about all the upcoming events, Vanbrugh Discount scheme and even get quick access to important phone numbers and bus times.";
 }
 
 - (IBAction)getDirections:(id)sender { //Opens Google Maps for directions to block if button is pressed
