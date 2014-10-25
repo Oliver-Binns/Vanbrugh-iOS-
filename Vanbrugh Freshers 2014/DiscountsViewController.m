@@ -20,6 +20,7 @@ NSArray *DiscountsArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
     DiscountsArray = [[NSArray alloc] initWithArray:[self parseDiscounts]];
     // Do any additional setup after loading the view.
 }
@@ -68,9 +69,14 @@ NSArray *DiscountsArray;
     //NSMutableArray *section = [self.events objectAtIndex:indexPath.section];
     //Event *cellEvent = [section objectAtIndex:indexPath.row];
     NSString *title = [[DiscountsArray objectAtIndex:indexPath.row] objectAtIndex:0];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", title];
+    cell.textLabel.text = title;
     cell.textLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
-    //cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", cellEvent.image]];
+    if([title isEqualToString:@"ÜGOT"]){
+        cell.imageView.image = [UIImage imageNamed:@"UGOT"];
+    }
+    else{
+        cell.imageView.image = [UIImage imageNamed:title];
+    }
     /*cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", cellEvent.location];
      cell.detailTextLabel.hidden = NO;
      cell.detailTextLabel.font = [UIFont fontWithName:@"Cantarell" size:18];*/
