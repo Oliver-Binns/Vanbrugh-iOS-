@@ -225,8 +225,6 @@ Event *thisEvent;
 
 -(void)showEventViewforDay:(NSInteger)day andEvent:(NSInteger)event{
     //Change your frame here.
-    self.detailView.hidden = NO;
-    
     /*//Set up objects on Event View
     eventView.backgroundColor = [UIColor whiteColor];*/
     
@@ -273,7 +271,7 @@ Event *thisEvent;
 			self.mapPlaceholder.image = [UIImage imageNamed:@"UpdateNeeded-3.jpg"];
 		}
 	}
-		
+	self.detailView.hidden = NO;	
 }
 
 -(void)hideEventView{

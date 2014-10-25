@@ -23,6 +23,7 @@
 @synthesize nextButton = _nextButton;
 @synthesize nextImage = _nextImage;
 @synthesize prevImage = _prevImage;
+@synthesize closeButton = _closeButton;
 
 -(BOOL)hasFourInchDisplay{
     return ([[UIDevice currentDevice]userInterfaceIdiom] == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568.0);
@@ -31,14 +32,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.faqTitleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
-    self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:14];
-    if(!
-       [self hasFourInchDisplay]){
+    if(![self hasFourInchDisplay]){
+        self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:12];
+    }
+    else{
+        self.faqTextLabel.font = [UIFont fontWithName:@"Cantarell" size:14];
+    }
+    self.closeButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    /*if(![self hasFourInchDisplay]){
         self.faqTitleLabel.frame = CGRectMake(16, 70, 288, 50);
         self.faqTextLabel.frame = CGRectMake(45, 100, 230, 330);
         self.nextImage.frame = CGRectMake(285, 240, 25, 50);
         self.prevImage.frame = CGRectMake(10, 240, 25, 50);
-    }
+    }*/
     self.prevImage.transform = CGAffineTransformMakeRotation(M_PI);
     [self setUpList];
     [self displayNextItem];

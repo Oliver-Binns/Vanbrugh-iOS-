@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *faqTextLabel;
 @property (strong, nonatomic) IBOutlet UIButton *prevButton;
 @property (strong, nonatomic) IBOutlet UIButton *nextButton;
+@property (strong, nonatomic) IBOutlet UIButton *closeButton;
 //@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeRight;
 @property (strong, nonatomic) IBOutlet UIImageView *prevImage;
 //@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *swipeLeft;
