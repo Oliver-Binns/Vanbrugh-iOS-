@@ -17,15 +17,26 @@
 @synthesize discountDetails = _discountDetails;
 @synthesize discountLabel = _discountLabel;
 @synthesize closeButton = _closeButton;
+@synthesize timeLabel = _timeLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.discountLabel.text = [self.discountDetails objectAtIndex:1];
     self.discountLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     self.closeButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    self.timeLabel.font = [UIFont fontWithName:@"Cantarell" size:12];
+    [self showTime];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(showTime) userInfo:nil repeats:YES];
     // Do any additional setup after loading the view.
 }
-
+-(void)showTime{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd\t\tHH:mm:ss zzz"];
+    [formatter setTimeZone: [NSTimeZone timeZoneWithName:@"Europe/London"]];
+    [formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"]];
+    NSString *timeString = [formatter stringFromDate:[NSDate date]];
+    self.timeLabel.text = timeString;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -13,5 +13,6 @@
 @property NSArray *discountDetails;
 @property (strong, nonatomic) IBOutlet UIButton *closeButton;
 @property (strong, nonatomic) IBOutlet UILabel *discountLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
