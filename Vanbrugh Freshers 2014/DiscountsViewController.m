@@ -80,12 +80,22 @@ NSArray *DiscountsArray;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-	return nil;
+    UILabel *myLabel = [[UILabel alloc] init];
+    myLabel.frame = CGRectMake(10, 0, 320, 20);
+    myLabel.font = [UIFont fontWithName:@"Cantarell" size:12];
+    myLabel.textColor = [UIColor whiteColor];
+    myLabel.text = [self tableView:tableView titleForHeaderInSection:section];
+    
+    UIView *headerView = [[UIView alloc] init];
+    headerView.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    [headerView addSubview:myLabel];
+    
+    return headerView;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-	return nil;
+	return @"Discounts";
 }
 
 #pragma mark - onClick of a cell
