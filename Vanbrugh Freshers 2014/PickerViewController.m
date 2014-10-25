@@ -40,8 +40,7 @@
 		[defaults synchronize];
 	}
 	
-    [self updateEvents];
-    [self updateFAQ];
+    
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -54,44 +53,6 @@
     }
     
     self.pickerOptions = @[@"Barbara Scott E Fresher", @"Barbara Scott F Fresher", @"Donald Barron B Fresher", @"Donald Barron C Fresher", @"Eric A Fresher", @"Eric B Fresher", @"Fairfax House Fresher", @"Le Page Fresher", @"Off Campus Fresher", @"Second/Third Year"]; //What about Off Campus?
-}
--(void)updateFAQ{
-    NSError* e;
-    NSURL *textFile = [NSURL URLWithString:@"http://www.vanbrugh-college.co.uk/faq.txt"];
-    NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSASCIIStringEncoding error:&e];
-    if(e == nil){
-        // For error information
-        NSError *error;
-        
-        // Create file manager
-        //NSFileManager *fileMgr = [NSFileManager defaultManager];
-        
-        // Point to Document directory
-        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"faq.txt"];
-        // Write the file
-        [str writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    }
-    //Everything good
-}
--(void)updateEvents{
-    NSError* e;
-    NSURL *textFile = [NSURL URLWithString:@"http://www.vanbrugh-college.co.uk/events.txt"];
-    NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSASCIIStringEncoding error:&e];
-    if(e == nil){
-        // For error information
-        NSError *error;
-        
-        // Create file manager
-        //NSFileManager *fileMgr = [NSFileManager defaultManager];
-        
-        // Point to Document directory
-        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"events.txt"];
-        // Write the file
-        [str writeToFile:filePath atomically:YES encoding:NSASCIIStringEncoding error:&error];
-    }
-    //Everything good
 }
 
 - (void)didReceiveMemoryWarning

@@ -44,7 +44,6 @@
     //scrollFrame.size = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
 	self.scrollView.frame = scrollFrame;*/
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCY-JR-YmC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U2b-oK-2wm">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -247,7 +247,7 @@
                                     <constraint firstAttribute="width" secondItem="q6N-rh-KsB" secondAttribute="height" multiplier="1275:178" id="Hrf-c9-ntv"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="178-1H-tkB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="178-1H-tkB">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -299,7 +299,7 @@
                                     <outlet property="delegate" destination="QUy-BD-bpt" id="rr2-nM-9yw"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-kN-5vf">
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-kN-5vf">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="cBv-pz-TIe">
@@ -351,14 +351,14 @@
                                             <constraint firstAttribute="height" constant="1" id="fBl-hO-dvU"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfc-eu-HmU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfc-eu-HmU">
                                         <rect key="frame" x="0.0" y="399" width="320" height="1"/>
                                         <color key="backgroundColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="oNl-Uk-MdK"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du2-fy-G4v">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="du2-fy-G4v">
                                         <rect key="frame" x="0.0" y="400" width="55" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -373,7 +373,7 @@
                                             <action selector="closeDetail:" destination="QUy-BD-bpt" eventType="touchUpInside" id="TU5-8b-QhH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-AJ-LAP">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ke8-AJ-LAP">
                                         <rect key="frame" x="55" y="400" width="265" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="Znc-tN-ZUL"/>
@@ -386,7 +386,7 @@
                                             <action selector="closeDetail:" destination="QUy-BD-bpt" eventType="touchUpInside" id="1Cf-eR-0i4"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krk-xD-Zg9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="krk-xD-Zg9">
                                         <rect key="frame" x="0.0" y="112" width="320" height="287"/>
                                     </imageView>
                                 </subviews>
@@ -848,6 +848,45 @@
             </objects>
             <point key="canvasLocation" x="132" y="1807"/>
         </scene>
+        <!--LoadFiles-->
+        <scene sceneID="2pj-HX-Jdk">
+            <objects>
+                <viewController title="LoadFiles" id="U2b-oK-2wm" customClass="LoadDataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Gx-j0-Ohr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ln5-rF-jDa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Nh-af-drB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CollegeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fLv-58-kjW">
+                                <rect key="frame" x="36" y="40" width="248" height="132"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="z91-Zy-eEA">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36470588240000001" green="0.1647058824" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fLv-58-kjW" firstAttribute="leading" secondItem="7Nh-af-drB" secondAttribute="leadingMargin" constant="20" id="1wC-Ve-lDG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fLv-58-kjW" secondAttribute="trailing" constant="20" id="75J-tu-fm8"/>
+                            <constraint firstItem="fLv-58-kjW" firstAttribute="width" secondItem="fLv-58-kjW" secondAttribute="height" multiplier="250:133" id="CJf-oK-Wk9"/>
+                            <constraint firstAttribute="centerY" secondItem="z91-Zy-eEA" secondAttribute="centerY" id="GDK-Bg-1Wz"/>
+                            <constraint firstAttribute="centerX" secondItem="z91-Zy-eEA" secondAttribute="centerX" id="R8P-gd-Iu3"/>
+                            <constraint firstItem="fLv-58-kjW" firstAttribute="top" secondItem="7Nh-af-drB" secondAttribute="topMargin" constant="40" id="oDW-Ur-fi7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="wCY-JR-YmC" kind="modal" identifier="goToPicker" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" animates="NO" id="BIl-lH-zG4"/>
+                        <segue destination="8YX-ce-x5E" kind="modal" identifier="goToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" animates="NO" id="yI9-zN-JMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bcz-Aj-Lbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="300"/>
+        </scene>
         <!--Picker View Controller-->
         <scene sceneID="m1b-5n-yMt">
             <objects>
@@ -1025,7 +1064,7 @@
         <image name="Events" width="30" height="30"/>
         <image name="FAQ" width="30" height="30"/>
         <image name="Home" width="30" height="30"/>
-        <image name="SOS" width="30" height="30"/>
+        <image name="SOS" width="25" height="25"/>
         <image name="arrow.png" width="50" height="100"/>
         <image name="block" width="40" height="40"/>
         <image name="calendar" width="100" height="100"/>
@@ -1046,7 +1085,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="l29-JM-8Yp"/>
+        <segue reference="YzQ-Co-ZqF"/>
+        <segue reference="BIl-lH-zG4"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.36470588240000001" green="0.1647058824" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
