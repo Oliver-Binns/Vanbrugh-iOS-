@@ -20,6 +20,9 @@
 @synthesize yorkNightline = _yorkNightline;
 @synthesize vanbrughWebsite = _vanbrughWebsite;
 @synthesize welfareMobile = _welfareMobile;
+@synthesize UoYBuses = _UoYBuses;
+@synthesize scrollView = _scrollView;
+@synthesize contentView = _contentView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +32,15 @@
     self.yorkNightline.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     self.vanbrughWebsite.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     self.welfareMobile.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    self.UoYBuses.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.scrollView layoutIfNeeded];
+    self.scrollView.contentSize = self.contentView.bounds.size;
 }
 
 - (IBAction)callEmergency:(id)sender {
@@ -121,6 +132,10 @@
 	}
 }
 
+- (IBAction)goToBuses:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://UOYB.us"]];
+    
+}
 - (IBAction)gotoWebsite:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.vanbrugh-college.co.uk"]];
 }

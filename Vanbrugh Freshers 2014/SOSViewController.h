@@ -16,6 +16,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *yorkNightline;
 @property (strong, nonatomic) IBOutlet UIButton *vanbrughWebsite;
 @property (strong, nonatomic) IBOutlet UIButton *welfareMobile;
+@property (strong, nonatomic) IBOutlet UIButton *UoYBuses;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 
 
 @end
