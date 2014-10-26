@@ -27,6 +27,12 @@
 @synthesize contentView = _contentView;
 @synthesize faqImage = _faqImage;
 @synthesize newsLabel = _newsLabel;
+@synthesize blockRepsLabel = _blockRepsLabel;
+@synthesize blockRep1Img = _blockRep1Img;
+@synthesize blockRep1Txt = _blockRep1Txt;
+@synthesize blockRep2Img = _blockRep2Img;
+@synthesize blockRep2Txt = _blockRep2Txt;
+@synthesize blockRepView = _blockRepView;
 
 @synthesize blockName = _blockName;
 
@@ -81,6 +87,12 @@
     self.changeBlockButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     self.newsLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     [self newsLabelUpdate];
+    self.blockRepsLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    [self newsLabelUpdate];
+    self.blockRep1Txt.font = [UIFont fontWithName:@"Cantarell" size:18];
+    [self newsLabelUpdate];
+    self.blockRep2Txt.font = [UIFont fontWithName:@"Cantarell" size:18];
+    [self newsLabelUpdate];
     self.faqButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     
     //reads what the block name is currently set to.
@@ -91,41 +103,74 @@
     //The next lines, set the other labels accordingly
     if([self.blockName isEqualToString:@"Barbara Scott Court Block E"]){
 		self.blockImage.image = [UIImage imageNamed:@"BarbaraScott.png"];
+        self.blockRep1Txt.text = @"Alex Light";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
+        self.blockRep2Txt.text = @"Toby Churchley";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
     }
     else if([self.blockName isEqualToString:@"Barbara Scott Court Block F"]){
 		self.blockImage.image = [UIImage imageNamed:@"BarbaraScott.png"];
+        self.blockRep1Txt.text = @"Alex Light";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
+        self.blockRep2Txt.text = @"Toby Churchley";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
     }
     else if([self.blockName isEqualToString:@"Donald Barron Court Block B"]){
 		self.blockImage.image = [UIImage imageNamed:@"DonaldBarron.png"];
+        self.blockRep1Txt.text = @"Alex Light";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
+        self.blockRep2Txt.text = @"Toby Churchley";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
     }
     else if([self.blockName isEqualToString:@"Donald Barron Court Block C"]){
 		self.blockImage.image = [UIImage imageNamed:@"DonaldBarron.png"];
+        self.blockRep1Txt.text = @"Alex Light";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
+        self.blockRep2Txt.text = @"Toby Churchley";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
     }
     else if([self.blockName isEqualToString:@"Eric Milner White Court Block A"]){
 		self.blockImage.image = [UIImage imageNamed:@"EricMilner.jpg"];
+        self.blockRep1Txt.text = @"Alice Strawbridge";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alice Strawbridge"];
+        self.blockRep2Txt.text = @"Hamish Dudgeon";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Hamish Dudgeon"];
     }
     else if([self.blockName isEqualToString:@"Eric Milner White Court Block B"]){
 		self.blockImage.image = [UIImage imageNamed:@"EricMilner.jpg"];
+        self.blockRep1Txt.text = @"Alice Strawbridge";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alice Strawbridge"];
+        self.blockRep2Txt.text = @"Hamish Dudgeon";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Hamish Dudgeon"];
     }
     else if([self.blockName isEqualToString:@"Fairfax House"]){
 		self.blockImage.image = [UIImage imageNamed:@"FairfaxHouse.png"];
+        self.blockRep1Txt.text = @"Abigail Creak";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Abigail Creak"];
+        self.blockRep2Txt.text = @"David Waters";
+        self.blockRep2Img.image = [UIImage imageNamed:@"David Waters"];
     }
     else if([self.blockName isEqualToString:@"Le Page Court"]){
 		self.blockImage.image = [UIImage imageNamed:@"LePage.png"];
+        self.blockRep1Txt.text = @"Amie Nevin";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Amie Nevin"];
     }
 	else if([self.blockName isEqualToString:@"Off Campus"]){
 		self.blockImage.image = [UIImage imageNamed:@"offcampus"];
+        self.blockRepsLabel.text = @"Your Off-Campus Rep:";
+        self.blockRep1Txt.text = @"Adrian Horan";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Adrian Horan"];
+        self.blockRep2Img.hidden = YES;
+        self.blockRep2Txt.hidden = YES;
 	}
 	else if([self.blockName isEqualToString:@"Second/Third Year"]){
 		self.blockImage.image = [UIImage imageNamed:@"offcampus"];
-		/*[self.moveInLabel setText:[NSString stringWithFormat:@"See you when you get here!"]];
-		[self.headStyc1img setHidden:YES];
-		[self.headStyc1txt setHidden:YES];
-		[self.headStyc2img setHidden:YES];
-		[self.headStyc2txt setHidden:YES];
-		UIImageView *comingSoon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 182, 320, 445)];
-		comingSoon.image = [UIImage imageNamed:@"ComingSoon.jpg"];
-		[self.contentView addSubview:comingSoon];*/
+        self.blockRepsLabel.hidden = YES;
+        self.blockRep1Img.hidden = YES;
+        self.blockRep1Txt.hidden = YES;
+        self.blockRep2Img.hidden = YES;
+        self.blockRep2Txt.hidden = YES;
+        self.blockRepView.hidden = YES;
 	}
 }
 -(void)newsLabelUpdate{

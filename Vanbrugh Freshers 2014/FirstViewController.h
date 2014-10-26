@@ -17,6 +17,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *faqButton;
 @property (strong, nonatomic) IBOutlet UIButton *faqImage;
 @property (strong, nonatomic) IBOutlet UILabel *newsLabel;
+@property (strong, nonatomic) IBOutlet UILabel *blockRepsLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *blockRep1Img;
+@property (strong, nonatomic) IBOutlet UIImageView *blockRep2Img;
+@property (strong, nonatomic) IBOutlet UILabel *blockRep1Txt;
+@property (strong, nonatomic) IBOutlet UILabel *blockRep2Txt;
+@property (strong, nonatomic) IBOutlet UIView *blockRepView;
 
 
 @property NSString *blockName;
