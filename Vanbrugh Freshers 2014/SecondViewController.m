@@ -116,8 +116,9 @@ Event *thisEvent;
 			[myEventObject setImage:myEvent[2]];
 			[myEventObject setStartTime:[NSDate dateWithTimeIntervalSince1970:[myEvent[3] doubleValue]]];
 			[myEventObject setEndTime:[NSDate dateWithTimeIntervalSince1970:[myEvent[4] doubleValue]]];
-			[myEventObject setDescr: myEvent[5]];
-			[dayEvents addObject:myEventObject];
+			//[myEventObject setDescr: myEvent[5]];
+			//DESCRIPTION NOT CURRENTLY USED BY APP.
+            [dayEvents addObject:myEventObject];
 		}
     }
     //[self.events addObject:dayEvents];

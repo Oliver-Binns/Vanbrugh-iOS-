@@ -16,20 +16,61 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //[self setUpNotifications];
     dispatch_group_t group = dispatch_group_create();
     
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
      ^ {
-         [self updateFile:@"events.txt"];
-         [self updateFile:@"faq.txt"];
-         [self updateFile:@"discounts.txt"];
-         [self updateFile:@"news.txt"];
+         NSString* content = [self getFile:@"events.txt"];
+         if(content != nil){
+             [self saveFileWithName:@"events.txt" andContent:content];
+         }
+         
+         content = [self getFile:@"faq.txt"];
+         if(content != nil){
+             [self saveFileWithName:@"faq.txt" andContent:content];
+         }
+         
+         content = [self getFile:@"discounts.txt"];
+         if(content != nil){
+             [self saveFileWithName:@"discounts.txt" andContent:content];
+         }
+         
+         content =[self getFile:@"notifications.txt"];
+         if(content != nil){
+             [self setUpNotificationsWithData:content];
+         }
      });
     
     dispatch_group_notify(group, dispatch_get_main_queue(),
       ^{
           [self moveOn];
       });
+}
+-(NSMutableArray *)getNotificationsWithData:(NSString *)data{
+    NSString *content = data;
+    
+    NSArray *notifications = [[NSArray alloc] initWithArray:[content componentsSeparatedByString:@"\n"]];
+    NSMutableArray *notificationsData = [[NSMutableArray alloc] init];
+    for(int i = 0; i < [notifications count]; i++){
+        [notificationsData addObject:[[notifications objectAtIndex:i] componentsSeparatedByString:@";"]];
+    }
+    return notificationsData;
+}
+-(void)setUpNotificationsWithData:(NSString *)data{
+    NSArray *notificationsList = [[NSArray alloc] initWithArray:[self getNotificationsWithData:data]];
+    for(int i = 1; i < [notificationsList count]; i++){ //start from line 1, line 0 is a file verification
+        NSArray *notification = [[NSArray alloc] initWithArray:[notificationsList objectAtIndex:i]];
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+        UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+        
+        localNotification.soundName = @"quack.caf";
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSince1970:[[notification objectAtIndex:1] doubleValue]];
+        
+        localNotification.alertBody = [notification objectAtIndex:0];
+        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    }
 }
 
 -(void)moveOn{
@@ -42,23 +83,29 @@
         [self performSegueWithIdentifier:@"goToPicker" sender:self];
     }
 }
--(void)updateFile:(NSString *)text{
+-(NSString *)getFile:(NSString *)text{
     NSError* e;
     NSURL *textFile = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.vanbrugh-college.co.uk/%@", text]];
     NSString* str = [NSString stringWithContentsOfURL:textFile encoding:NSUTF8StringEncoding error:&e];
-    if(e == nil){
-        // For error information
-        NSError *error;
-        
-        // Create file manager
-        //NSFileManager *fileMgr = [NSFileManager defaultManager];
-        
-        // Point to Document directory
-        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:text];
-        // Write the file
-        [str writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
+    if(e == nil && [str hasPrefix:text]){
+        return str;
     }
+    else{
+        return nil;
+    }
+}
+-(BOOL)saveFileWithName:(NSString *)name andContent:(NSString *)content{
+    // Create file manager
+    //NSFileManager *fileMgr = [NSFileManager defaultManager];
+    
+    // Point to Document directory
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:name];
+    //Remove the file verification
+    content = [content substringFromIndex:[name length]+1];
+    // Write the file
+    [content writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil]; //no error handling needed- this is provided when they are accessed.
+    return true;
 }
 
 - (void)didReceiveMemoryWarning {

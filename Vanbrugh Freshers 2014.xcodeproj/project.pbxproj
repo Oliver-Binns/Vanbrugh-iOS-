@@ -68,6 +68,7 @@
 		A7C8C8F01986A8E4003249F6 /* HamishDudgeon-EricA.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C8C8EC1986A8E4003249F6 /* HamishDudgeon-EricA.png */; };
 		A7CA5477196D60B800C44EF0 /* SOSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CA5476196D60B800C44EF0 /* SOSViewController.m */; };
 		A7CB198A19F9D1A5001879E1 /* DiscountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CB198919F9D1A5001879E1 /* DiscountsViewController.m */; };
+		A7D4751119FC674A00EED306 /* quack.caf in Resources */ = {isa = PBXBuildFile; fileRef = A7D4751019FC674A00EED306 /* quack.caf */; };
 		A7D8297B1994073600016157 /* ComedyNight.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D8297A1994073600016157 /* ComedyNight.png */; };
 		A7FB0E2D199A8E86007453E6 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A7FB0E2C199A8E86007453E6 /* arrow.png */; };
 /* End PBXBuildFile section */
@@ -159,6 +160,7 @@
 		A7CA5476196D60B800C44EF0 /* SOSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOSViewController.m; sourceTree = "<group>"; };
 		A7CB198819F9D1A5001879E1 /* DiscountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountsViewController.h; sourceTree = "<group>"; };
 		A7CB198919F9D1A5001879E1 /* DiscountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountsViewController.m; sourceTree = "<group>"; };
+		A7D4751019FC674A00EED306 /* quack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quack.caf; sourceTree = "<group>"; };
 		A7D8297A1994073600016157 /* ComedyNight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ComedyNight.png; path = images/EventImages/ComedyNight.png; sourceTree = "<group>"; };
 		A7FB0E2C199A8E86007453E6 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = images/arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +287,7 @@
 		A70ABA3F1945B9EA00D05DC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7D4751019FC674A00EED306 /* quack.caf */,
 				A7C82690196E0BBA00768451 /* images */,
 				A7C1B75C196091D70053EC92 /* Cantarell-Regular.ttf */,
 				A70ABA401945B9EA00D05DC4 /* Vanbrugh Freshers 2014-Info.plist */,
@@ -465,6 +468,7 @@
 				A7079ED719FA91A400A6110F /* TemplateIcon2x.png in Resources */,
 				A7C82694196E0E8800768451 /* vanbrughDiningHall.png in Resources */,
 				A7B5816C19885054002FF4A0 /* FairfaxHouse.png in Resources */,
+				A7D4751119FC674A00EED306 /* quack.caf in Resources */,
 				A7FB0E2D199A8E86007453E6 /* arrow.png in Resources */,
 				A7A00D7E199E572E0055C62F /* ComingSoonSTYCs.jpg in Resources */,
 				A7C8C8F01986A8E4003249F6 /* HamishDudgeon-EricA.png in Resources */,
