@@ -21,12 +21,12 @@
     
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
      ^ {
-         NSString* content = [self getFile:@"events.txt"];
+         NSString* content = [self getFile:@"events-v1_1.txt"];
          if(content != nil){
              [self saveFileWithName:@"events.txt" andContent:content];
          }
          
-         content = [self getFile:@"faq.txt"];
+         content = [self getFile:@"faq-v1_1.txt"];
          if(content != nil){
              [self saveFileWithName:@"faq.txt" andContent:content];
          }
@@ -106,7 +106,7 @@
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:name];
     //Remove the file verification
-    content = [content substringFromIndex:[name length]+1];
+    content = [content substringFromIndex:[name length]+6];
     // Write the file
     [content writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil]; //no error handling needed- this is provided when they are accessed.
     return true;
