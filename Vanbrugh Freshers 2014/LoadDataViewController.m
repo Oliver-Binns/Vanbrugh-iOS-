@@ -44,6 +44,7 @@
              [self saveFileWithName:@"discounts.txt" andContent:content];
          }
          
+         
          content =[self getFile:@"notifications.txt"];
          if(content != nil){
              [self setUpNotificationsWithData:content];
@@ -66,17 +67,25 @@
     return notificationsData;
 }
 -(void)setUpNotificationsWithData:(NSString *)data{
+    //Cancel all previously schedules notifications, so we don't send multiple copies of the same notification
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     NSArray *notificationsList = [[NSArray alloc] initWithArray:[self getNotificationsWithData:data]];
     for(int i = 1; i < [notificationsList count]; i++){ //start from line 1, line 0 is a file verification
         NSArray *notification = [[NSArray alloc] initWithArray:[notificationsList objectAtIndex:i]];
         
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]){
+            //The next line only works on iOS 8+, application will crash if they are run on iOS 7.
+            [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+        }
+        
         UILocalNotification* localNotification = [[UILocalNotification alloc] init];
         
         localNotification.soundName = @"quack.caf";
         localNotification.fireDate = [NSDate dateWithTimeIntervalSince1970:[[notification objectAtIndex:1] doubleValue]];
-        
         localNotification.alertBody = [notification objectAtIndex:0];
+        
+        NSLog(@"%@, %@", localNotification.fireDate, localNotification.alertBody);
         
         NSDate *now = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
         if ([now compare:localNotification.fireDate] == NSOrderedAscending) { //the local notification time is in the future

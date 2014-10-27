@@ -527,7 +527,7 @@
                             <constraint firstItem="Hfn-vU-YgU" firstAttribute="bottom" secondItem="Wl5-5L-wIT" secondAttribute="bottom" id="cXB-8g-BYh"/>
                             <constraint firstItem="NES-WS-Gjv" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" id="d9T-2S-Jj6"/>
                             <constraint firstAttribute="bottomMargin" secondItem="NES-WS-Gjv" secondAttribute="bottom" constant="48" id="e24-GI-1KV"/>
-                            <constraint firstItem="Hfn-vU-YgU" firstAttribute="top" secondItem="gMD-aP-Fq6" secondAttribute="topMargin" id="pXa-2C-ZXQ"/>
+                            <constraint firstItem="Hfn-vU-YgU" firstAttribute="top" secondItem="gMD-aP-Fq6" secondAttribute="top" id="pXa-2C-ZXQ"/>
                             <constraint firstAttribute="trailing" secondItem="Sft-kN-5vf" secondAttribute="trailing" id="syB-by-zN3"/>
                         </constraints>
                     </view>
@@ -628,7 +628,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Ep5-4M-69A" firstAttribute="top" secondItem="Nye-kd-05w" secondAttribute="topMargin" id="1vH-o7-bX3"/>
+                            <constraint firstItem="Ep5-4M-69A" firstAttribute="top" secondItem="Nye-kd-05w" secondAttribute="top" id="1vH-o7-bX3"/>
                             <constraint firstItem="sxE-2F-Ian" firstAttribute="leading" secondItem="dE8-w5-dYT" secondAttribute="trailing" constant="20" id="3vk-aQ-4ex"/>
                             <constraint firstAttribute="centerX" secondItem="Ep5-4M-69A" secondAttribute="centerX" id="5JI-1Q-ldl"/>
                             <constraint firstItem="Xmx-em-TcF" firstAttribute="top" secondItem="M29-J2-5aF" secondAttribute="bottom" id="8Lj-8a-UnN"/>
@@ -966,7 +966,7 @@
                         <constraints>
                             <constraint firstAttribute="width" secondItem="APY-hP-7bD" secondAttribute="height" multiplier="1275:178" id="6YE-Tb-yNr"/>
                             <constraint firstAttribute="trailing" secondItem="tdP-8w-yVQ" secondAttribute="trailing" id="E22-Xr-cQq"/>
-                            <constraint firstItem="5cg-qH-veZ" firstAttribute="top" secondItem="GA9-8R-7D2" secondAttribute="topMargin" id="IGn-bn-hlU"/>
+                            <constraint firstItem="5cg-qH-veZ" firstAttribute="top" secondItem="GA9-8R-7D2" secondAttribute="top" id="IGn-bn-hlU"/>
                             <constraint firstItem="APY-hP-7bD" firstAttribute="bottom" secondItem="5cg-qH-veZ" secondAttribute="bottom" id="Iob-Mr-aLi"/>
                             <constraint firstItem="APY-hP-7bD" firstAttribute="top" secondItem="dBY-CY-bld" secondAttribute="bottom" id="OAR-Ue-7QR"/>
                             <constraint firstItem="ccf-F9-ji0" firstAttribute="top" secondItem="tdP-8w-yVQ" secondAttribute="bottom" id="RIB-fd-TQW"/>
@@ -1244,7 +1244,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="l29-JM-8Yp"/>
+        <segue reference="PZs-th-SkO"/>
         <segue reference="frM-C3-uVl"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.36470588240000001" green="0.1647058824" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
