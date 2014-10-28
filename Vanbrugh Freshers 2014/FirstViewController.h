@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *blockRep1Txt;
 @property (strong, nonatomic) IBOutlet UILabel *blockRep2Txt;
 @property (strong, nonatomic) IBOutlet UIView *blockRepView;
+@property (weak, nonatomic) IBOutlet UIButton *refreshBusTimes;
 
 
 @property NSString *blockName;

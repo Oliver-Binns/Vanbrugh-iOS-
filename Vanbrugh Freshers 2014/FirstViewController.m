@@ -33,6 +33,7 @@
 @synthesize blockRep2Img = _blockRep2Img;
 @synthesize blockRep2Txt = _blockRep2Txt;
 @synthesize blockRepView = _blockRepView;
+@synthesize refreshBusTimes = _refreshBusTimes;
 
 @synthesize blockName = _blockName;
 
@@ -86,14 +87,12 @@
 	self.faqImage.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:35];
     self.changeBlockButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     self.newsLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
-    [self newsLabelUpdate];
+    [self busLabelUpdate];
     self.blockRepsLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
-    [self newsLabelUpdate];
     self.blockRep1Txt.font = [UIFont fontWithName:@"Cantarell" size:18];
-    [self newsLabelUpdate];
     self.blockRep2Txt.font = [UIFont fontWithName:@"Cantarell" size:18];
-    [self newsLabelUpdate];
     self.faqButton.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+    self.refreshBusTimes.titleLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
     
     //reads what the block name is currently set to.
     self.blockName = [defaults stringForKey:@"block"];
@@ -197,8 +196,79 @@
         self.blockRepView.hidden = YES;
 	}
 }
--(void)newsLabelUpdate{
-    self.newsLabel.text = @"Welcome to the new Vanbrugh College app.\n\nYou can access information about all the upcoming events, Vanbrugh Discount scheme and even get quick access to important phone numbers and bus times.";
+- (NSMutableArray *)simpleJsonParsing:(NSString *)jsonURL
+{
+    //-- Make URL request with server
+    NSHTTPURLResponse *response = nil;
+    NSString *jsonUrlString = jsonURL;
+    NSURL *url = [NSURL URLWithString:[jsonUrlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    //-- Get request and response though URL
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
+    
+    
+    //-- JSON Parsing
+    
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
+    NSDictionary *departures = result[@"departures"];
+    NSMutableArray *buses = [[NSMutableArray alloc] init];
+
+    if(departures[@"4"] != nil){
+        [buses addObject:departures[@"4"]];
+    }
+    if(departures[@"44"] != nil){
+        [buses addObject:departures[@"44"]];
+    }
+    if(departures[@"UB1"] != nil){
+        [buses addObject:departures[@"UB1"]];
+    }
+    return buses;
+}
+-(void)busLabelUpdate{
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+     ^ {
+         NSArray *buses = [[NSArray alloc] initWithArray:[self simpleJsonParsing:@"http://transportapi.com/v3/uk/bus/stop/3290YYA00279/live.json?group=route&api_key=cc0dfbfadb5ef786c386a43c4dd8c1c7&app_id=52946486"]];
+         [self busFetchComplete:buses];
+     });
+}
+-(void)busFetchComplete:(NSArray *)buses{
+    NSString *labelString = @"The next buses from Market Square toward the station are:\n";
+    
+    for(int i = 0; i < [buses count]; i++){
+        NSArray *times = [[NSArray alloc] initWithArray:[buses objectAtIndex:i]];
+        labelString = [NSString stringWithFormat:@"%@\n%@:\t\t", labelString, [[times objectAtIndex:0] valueForKey:@"line"]];
+        
+        for(int j = 0; j < [times count]; j++){
+            labelString = [NSString stringWithFormat:@"%@%@,", labelString, [[times objectAtIndex:j] valueForKey:@"best_departure_estimate"]];
+            if(j != [times count] - 1){
+                labelString = [NSString stringWithFormat:@"%@\t\t", labelString];
+            }
+        }
+        
+    }
+    
+    NSArray *eastBuses = [[NSArray alloc] initWithArray:[self simpleJsonParsing:@"http://transportapi.com/v3/uk/bus/stop/3290YYA00282/live.json?group=route&api_key=cc0dfbfadb5ef786c386a43c4dd8c1c7&app_id=52946486"]];
+    
+    labelString = [NSString stringWithFormat:@"%@\n\nThe next buses from Market Square towards East Campus are:\n", labelString];
+    
+    for(int i = 0; i < [eastBuses count]; i++){
+        NSArray *times = [[NSArray alloc] initWithArray:[eastBuses objectAtIndex:i]];
+        labelString = [NSString stringWithFormat:@"%@\n%@:\t\t", labelString, [[times objectAtIndex:0] valueForKey:@"line"]];
+        
+        for(int j = 0; j < [times count]; j++){
+            labelString = [NSString stringWithFormat:@"%@%@,", labelString, [[times objectAtIndex:j] valueForKey:@"best_departure_estimate"]];
+            if(j != [times count] - 1){
+                labelString = [NSString stringWithFormat:@"%@\t\t", labelString];
+            }
+        }
+        
+    }
+    
+    self.newsLabel.text = labelString;
 }
 
 - (IBAction)getDirections:(id)sender { //Opens Google Maps for directions to block if button is pressed
@@ -259,6 +329,9 @@
         //NSURL *url = [NSURL URLWithString:stringUrl];
         //[[UIApplication sharedApplication] openURL:url];
     }
+}
+- (IBAction)refreshBusTimes:(id)sender {
+    [self busLabelUpdate];
 }
 
 - (void)didReceiveMemoryWarning
