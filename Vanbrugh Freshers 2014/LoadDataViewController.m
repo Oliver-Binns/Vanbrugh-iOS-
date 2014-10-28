@@ -85,8 +85,6 @@
         localNotification.fireDate = [NSDate dateWithTimeIntervalSince1970:[[notification objectAtIndex:1] doubleValue]];
         localNotification.alertBody = [notification objectAtIndex:0];
         
-        NSLog(@"%@, %@", localNotification.fireDate, localNotification.alertBody);
-        
         NSDate *now = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
         if ([now compare:localNotification.fireDate] == NSOrderedAscending) { //the local notification time is in the future
             [[UIApplication sharedApplication] scheduleLocalNotification:localNotification]; //only schedules the notification if it is in the future

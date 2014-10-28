@@ -184,10 +184,10 @@
                                                     <constraint firstItem="83i-NO-Jo6" firstAttribute="centerX" secondItem="zy2-TP-2ec" secondAttribute="centerX" id="9wd-JP-1JD"/>
                                                     <constraint firstItem="zy2-TP-2ec" firstAttribute="top" secondItem="VJc-PZ-fh1" secondAttribute="bottom" constant="20" id="A9I-9W-w4o"/>
                                                     <constraint firstItem="83i-NO-Jo6" firstAttribute="width" secondItem="zy2-TP-2ec" secondAttribute="width" id="BPt-L7-RBf"/>
-                                                    <constraint firstItem="zy2-TP-2ec" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" constant="20" id="Eqf-u6-0Ec"/>
+                                                    <constraint firstItem="zy2-TP-2ec" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" priority="750" constant="20" id="Eqf-u6-0Ec"/>
                                                     <constraint firstItem="VJc-PZ-fh1" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" constant="20" id="HPX-5x-MUE"/>
                                                     <constraint firstItem="9W2-9P-5lr" firstAttribute="top" secondItem="ROf-id-L5u" secondAttribute="bottom" constant="10" id="Qci-00-qcq"/>
-                                                    <constraint firstItem="ROf-id-L5u" firstAttribute="leading" secondItem="zy2-TP-2ec" secondAttribute="trailing" constant="20" id="TFf-OT-DTw"/>
+                                                    <constraint firstItem="ROf-id-L5u" firstAttribute="leading" secondItem="zy2-TP-2ec" secondAttribute="trailing" priority="750" constant="20" id="TFf-OT-DTw"/>
                                                     <constraint firstItem="9W2-9P-5lr" firstAttribute="width" secondItem="ROf-id-L5u" secondAttribute="width" id="Yra-Fh-bcd"/>
                                                     <constraint firstAttribute="trailing" secondItem="VJc-PZ-fh1" secondAttribute="trailing" constant="20" id="eAr-fO-TEe"/>
                                                     <constraint firstItem="zy2-TP-2ec" firstAttribute="width" secondItem="ROf-id-L5u" secondAttribute="width" id="gD2-vn-wQe"/>

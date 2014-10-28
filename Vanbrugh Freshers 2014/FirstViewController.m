@@ -154,12 +154,36 @@
 		self.blockImage.image = [UIImage imageNamed:@"LePage.png"];
         self.blockRep1Txt.text = @"Amie Nevin";
         self.blockRep1Img.image = [UIImage imageNamed:@"Amie Nevin"];
+        
+        //ONLY ONE BLOCK REP, Layout in centre of view.
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+        //Calculate width of image- view minus margins / 2.
+        NSInteger imageWidth = (self.view.frame.size.width - 80) / 2;
+        
+        //make the image equal to this width
+        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeHeight multiplier:0 constant:imageWidth]];
+        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeWidth multiplier:0 constant:imageWidth]];
+        
+        //Hide the other label and image.
+        self.blockRep2Img.hidden = YES;
+        self.blockRep2Txt.hidden = YES;
     }
 	else if([self.blockName isEqualToString:@"Off Campus"]){
 		self.blockImage.image = [UIImage imageNamed:@"offcampus"];
         self.blockRepsLabel.text = @"Your Off-Campus Rep:";
         self.blockRep1Txt.text = @"Adrian Horan";
         self.blockRep1Img.image = [UIImage imageNamed:@"Adrian Horan"];
+        
+        //ONLY ONE BLOCK REP, Layout in centre of view.
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+        //Calculate width of image- view minus margins / 2.
+        NSInteger imageWidth = (self.view.frame.size.width - 80) / 2;
+        
+        //make the image equal to this width
+        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeHeight multiplier:0 constant:imageWidth]];
+        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeWidth multiplier:0 constant:imageWidth]];
+        
+        //Hide the other label and image.
         self.blockRep2Img.hidden = YES;
         self.blockRep2Txt.hidden = YES;
 	}
