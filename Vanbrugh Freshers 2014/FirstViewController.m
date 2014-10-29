@@ -205,12 +205,16 @@
     
     //-- Get request and response though URL
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url];
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
-    
-    
-    //-- JSON Parsing
-    
+    NSError *error;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error != nil){
+        return nil;
+    }
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%lu", [result count]);
+    if([result count] == 0){
+        return nil;
+    }
     NSDictionary *departures = result[@"departures"];
     NSMutableArray *buses = [[NSMutableArray alloc] init];
 
@@ -232,11 +236,16 @@
     dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
      ^ {
          NSArray *buses = [[NSArray alloc] initWithArray:[self simpleJsonParsing:@"http://transportapi.com/v3/uk/bus/stop/3290YYA00279/live.json?group=route&api_key=cc0dfbfadb5ef786c386a43c4dd8c1c7&app_id=52946486"]];
-         [self busFetchComplete:buses];
+         if([buses count] != 0){
+             [self busFetchComplete:buses];
+         }
+         else{
+             self.newsLabel.text = @"Sorry, an error occured loading bus times.";
+         }
      });
 }
--(void)busFetchComplete:(NSArray *)buses{
-    NSString *labelString = @"The next buses from Market Square toward the station are:\n";
+-(void)busFetchComplete:(NSArray *)buses{//still need to code for -over request limit, no connection, etc.
+    NSString *labelString = @"The next buses from Market Square towards York are:\n";
     
     for(int i = 0; i < [buses count]; i++){
         NSArray *times = [[NSArray alloc] initWithArray:[buses objectAtIndex:i]];
@@ -331,6 +340,7 @@
     }
 }
 - (IBAction)refreshBusTimes:(id)sender {
+    self.newsLabel.text = @"Reloading bus times...";
     [self busLabelUpdate];
 }
 
