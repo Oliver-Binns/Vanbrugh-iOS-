@@ -24,7 +24,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *blockRep2Txt;
 @property (strong, nonatomic) IBOutlet UIView *blockRepView;
 @property (weak, nonatomic) IBOutlet UIButton *refreshBusTimes;
+@property (weak, nonatomic) IBOutlet UIImageView *changeBlockTopLine;
+@property (weak, nonatomic) IBOutlet UIImageView *blockRepTopLine;
+@property (weak, nonatomic) IBOutlet UIView *blockRepsView;
 
+@property (weak, nonatomic) IBOutlet UILabel *styLabel;
 
 @property NSString *blockName;
 

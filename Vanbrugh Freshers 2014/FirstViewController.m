@@ -34,7 +34,10 @@
 @synthesize blockRep2Txt = _blockRep2Txt;
 @synthesize blockRepView = _blockRepView;
 @synthesize refreshBusTimes = _refreshBusTimes;
-
+@synthesize blockRepTopLine = _blockRepTopLine;
+@synthesize changeBlockTopLine = _changeBlockTopLine;
+@synthesize blockRepsView = _blockRepsView;
+@synthesize styLabel = _styLabel;
 @synthesize blockName = _blockName;
 
 -(BOOL)hasFourInchDisplay{
@@ -193,7 +196,11 @@
         self.blockRep1Txt.hidden = YES;
         self.blockRep2Img.hidden = YES;
         self.blockRep2Txt.hidden = YES;
-        self.blockRepView.hidden = YES;
+        //self.blockRepView.hidden = YES;
+        //[self.blockRepsView removeFromSuperview];
+        self.styLabel.hidden = NO;
+        self.styLabel.font = [UIFont fontWithName:@"Cantarell" size:18];
+        //[self.blockRepTopLine addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRepTopLine attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.changeBlockTopLine attribute:NSLayoutAttributeTop multiplier:1 constant:1]];
 	}
 }
 - (NSMutableArray *)simpleJsonParsing:(NSString *)jsonURL
@@ -211,7 +218,6 @@
         return nil;
     }
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"%lu", [result count]);
     if([result count] == 0){
         return nil;
     }
