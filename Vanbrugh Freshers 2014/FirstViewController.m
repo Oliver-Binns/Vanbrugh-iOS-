@@ -105,66 +105,66 @@
     //The next lines, set the other labels accordingly
     if([self.blockName isEqualToString:@"Barbara Scott Court Block E"]){
 		self.blockImage.image = [UIImage imageNamed:@"BarbaraScott.png"];
-        self.blockRep1Txt.text = @"Alex Light";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
-        self.blockRep2Txt.text = @"Toby Churchley";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
+        self.blockRep1Txt.text = @"Kajsa Arnlund";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Kajsa Arnlund"];
+        self.blockRep2Txt.text = @"Rachel Terry";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Rachel Terry"];
     }
     else if([self.blockName isEqualToString:@"Barbara Scott Court Block F"]){
 		self.blockImage.image = [UIImage imageNamed:@"BarbaraScott.png"];
-        self.blockRep1Txt.text = @"Alex Light";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
-        self.blockRep2Txt.text = @"Toby Churchley";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
+		self.blockRep1Txt.text = @"Kajsa Arnlund";
+		self.blockRep1Img.image = [UIImage imageNamed:@"Kajsa Arnlund"];
+		self.blockRep2Txt.text = @"Rachel Terry";
+		self.blockRep2Img.image = [UIImage imageNamed:@"Rachel Terry"];
     }
     else if([self.blockName isEqualToString:@"Donald Barron Court Block B"]){
 		self.blockImage.image = [UIImage imageNamed:@"DonaldBarron.png"];
-        self.blockRep1Txt.text = @"Alex Light";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
-        self.blockRep2Txt.text = @"Toby Churchley";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
+		self.blockRep1Txt.text = @"Kajsa Arnlund";
+		self.blockRep1Img.image = [UIImage imageNamed:@"Kajsa Arnlund"];
+		self.blockRep2Txt.text = @"Rachel Terry";
+		self.blockRep2Img.image = [UIImage imageNamed:@"Rachel Terry"];
     }
     else if([self.blockName isEqualToString:@"Donald Barron Court Block C"]){
 		self.blockImage.image = [UIImage imageNamed:@"DonaldBarron.png"];
-        self.blockRep1Txt.text = @"Alex Light";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Light"];
-        self.blockRep2Txt.text = @"Toby Churchley";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Toby Churchley"];
+		self.blockRep1Txt.text = @"Kajsa Arnlund";
+		self.blockRep1Img.image = [UIImage imageNamed:@"Kajsa Arnlund"];
+		self.blockRep2Txt.text = @"Rachel Terry";
+		self.blockRep2Img.image = [UIImage imageNamed:@"Rachel Terry"];
     }
     else if([self.blockName isEqualToString:@"Eric Milner White Court Block A"]){
 		self.blockImage.image = [UIImage imageNamed:@"EricMilner.jpg"];
-        self.blockRep1Txt.text = @"Alice Strawbridge";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alice Strawbridge"];
-        self.blockRep2Txt.text = @"Hamish Dudgeon";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Hamish Dudgeon"];
+        self.blockRep1Txt.text = @"Orkney Bankes";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Orkney Bankes"];
+        self.blockRep2Txt.text = @"Sarah Weinberg";
+        self.blockRep2Img.image = [UIImage imageNamed:@"Sarah Weinberg"];
     }
     else if([self.blockName isEqualToString:@"Eric Milner White Court Block B"]){
 		self.blockImage.image = [UIImage imageNamed:@"EricMilner.jpg"];
-        self.blockRep1Txt.text = @"Alice Strawbridge";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Alice Strawbridge"];
-        self.blockRep2Txt.text = @"Hamish Dudgeon";
-        self.blockRep2Img.image = [UIImage imageNamed:@"Hamish Dudgeon"];
+		self.blockRep1Txt.text = @"Orkney Bankes";
+		self.blockRep1Img.image = [UIImage imageNamed:@"Orkney Bankes"];
+		self.blockRep2Txt.text = @"Sarah Weinberg";
+		self.blockRep2Img.image = [UIImage imageNamed:@"Sarah Weinberg"];
     }
     else if([self.blockName isEqualToString:@"Fairfax House"]){
 		self.blockImage.image = [UIImage imageNamed:@"FairfaxHouse.png"];
-        self.blockRep1Txt.text = @"Abigail Creak";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Abigail Creak"];
-        self.blockRep2Txt.text = @"David Waters";
-        self.blockRep2Img.image = [UIImage imageNamed:@"David Waters"];
+        self.blockRep1Txt.text = @"Brad Dunkley";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Brad Dunkley"];
+		
+		//ONLY ONE BLOCK REP, Layout in centre of view.
+		[self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+		
+		//Hide the other label and image.
+		self.blockRep2Img.hidden = YES;
+		self.blockRep2Txt.hidden = YES;
+		
     }
     else if([self.blockName isEqualToString:@"Le Page Court"]){
 		self.blockImage.image = [UIImage imageNamed:@"LePage.png"];
-        self.blockRep1Txt.text = @"Amie Nevin";
-        self.blockRep1Img.image = [UIImage imageNamed:@"Amie Nevin"];
+        self.blockRep1Txt.text = @"Alex Payne";
+        self.blockRep1Img.image = [UIImage imageNamed:@"Alex Payne"];
         
         //ONLY ONE BLOCK REP, Layout in centre of view.
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
-        //Calculate width of image- view minus margins / 2.
-        NSInteger imageWidth = (self.view.frame.size.width - 80) / 2;
-        
-        //make the image equal to this width
-        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeHeight multiplier:0 constant:imageWidth]];
-        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeWidth multiplier:0 constant:imageWidth]];
         
         //Hide the other label and image.
         self.blockRep2Img.hidden = YES;
@@ -178,12 +178,6 @@
         
         //ONLY ONE BLOCK REP, Layout in centre of view.
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
-        //Calculate width of image- view minus margins / 2.
-        NSInteger imageWidth = (self.view.frame.size.width - 80) / 2;
-        
-        //make the image equal to this width
-        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeHeight multiplier:0 constant:imageWidth]];
-        [self.blockRep1Img addConstraint:[NSLayoutConstraint constraintWithItem:self.blockRep1Img attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.blockRep1Img attribute:NSLayoutAttributeWidth multiplier:0 constant:imageWidth]];
         
         //Hide the other label and image.
         self.blockRep2Img.hidden = YES;

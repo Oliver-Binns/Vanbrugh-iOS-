@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U2b-oK-2wm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U2b-oK-2wm">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -171,7 +171,9 @@ Let us know if there's anything you think we should add!</string>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-TP-2ec">
                                                         <rect key="frame" x="20" y="61" width="130" height="130"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="510" id="7YV-3f-EDM"/>
                                                             <constraint firstAttribute="width" secondItem="zy2-TP-2ec" secondAttribute="height" multiplier="1:1" id="QHH-4o-Mre"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="510" id="h8H-fQ-wkI"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROf-id-L5u">
@@ -203,11 +205,11 @@ Let us know if there's anything you think we should add!</string>
                                                     <constraint firstItem="83i-NO-Jo6" firstAttribute="centerX" secondItem="zy2-TP-2ec" secondAttribute="centerX" id="9wd-JP-1JD"/>
                                                     <constraint firstItem="zy2-TP-2ec" firstAttribute="top" secondItem="VJc-PZ-fh1" secondAttribute="bottom" constant="20" id="A9I-9W-w4o"/>
                                                     <constraint firstItem="83i-NO-Jo6" firstAttribute="width" secondItem="zy2-TP-2ec" secondAttribute="width" id="BPt-L7-RBf"/>
-                                                    <constraint firstItem="zy2-TP-2ec" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" constant="20" id="Eqf-u6-0Ec"/>
+                                                    <constraint firstItem="zy2-TP-2ec" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" priority="750" constant="20" id="Eqf-u6-0Ec"/>
                                                     <constraint firstItem="VJc-PZ-fh1" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" constant="20" id="HPX-5x-MUE"/>
                                                     <constraint firstAttribute="centerY" secondItem="Ip6-2c-3de" secondAttribute="centerY" id="MjQ-u8-Fip"/>
                                                     <constraint firstItem="9W2-9P-5lr" firstAttribute="top" secondItem="ROf-id-L5u" secondAttribute="bottom" constant="10" id="Qci-00-qcq"/>
-                                                    <constraint firstItem="ROf-id-L5u" firstAttribute="leading" secondItem="zy2-TP-2ec" secondAttribute="trailing" constant="20" id="TFf-OT-DTw"/>
+                                                    <constraint firstItem="ROf-id-L5u" firstAttribute="leading" secondItem="zy2-TP-2ec" secondAttribute="trailing" priority="750" constant="20" id="TFf-OT-DTw"/>
                                                     <constraint firstItem="9W2-9P-5lr" firstAttribute="width" secondItem="ROf-id-L5u" secondAttribute="width" id="Yra-Fh-bcd"/>
                                                     <constraint firstItem="Ip6-2c-3de" firstAttribute="leading" secondItem="lvP-k4-4wk" secondAttribute="leading" constant="20" id="afm-bn-JL4"/>
                                                     <constraint firstAttribute="trailing" secondItem="VJc-PZ-fh1" secondAttribute="trailing" constant="20" id="eAr-fO-TEe"/>
