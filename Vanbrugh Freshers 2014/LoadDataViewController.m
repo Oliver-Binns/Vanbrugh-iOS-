@@ -45,10 +45,10 @@
          }
          
          
-         content =[self getFile:@"notifications.txt"];
+         /*content =[self getFile:@"notifications.txt"];
          if(content != nil){
              [self setUpNotificationsWithData:content];
-         }
+         }*/
      });
     
     dispatch_group_notify(group, dispatch_get_main_queue(),
@@ -66,7 +66,7 @@
     }
     return notificationsData;
 }
--(void)setUpNotificationsWithData:(NSString *)data{
+/*-(void)setUpNotificationsWithData:(NSString *)data{
     //Cancel all previously schedules notifications, so we don't send multiple copies of the same notification
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     
@@ -90,7 +90,7 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:localNotification]; //only schedules the notification if it is in the future
         }
     }
-}
+}*/
 
 -(void)moveOn{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

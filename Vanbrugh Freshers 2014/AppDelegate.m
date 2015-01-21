@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 #import <GoogleMaps/GoogleMaps.h>
 #include <AudioToolbox/AudioToolbox.h>
 
@@ -15,6 +16,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [GMSServices provideAPIKey:@"AIzaSyDE1iBUFPN8ukVi6wLDCx24sUE5HWMaiec"];
+    
+    [Parse setApplicationId:@"3936dHWYNUD9lYNEHuAcUDfs8ks6Jg6i0ZlmUtWu"
+                  clientKey:@"72hEZZ0KLwIY8mMJChJ89HXaI06SJeHIdLN9w4YB"];
+    // Register for Push Notitications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     NSMutableDictionary *attributes = [NSMutableDictionary dictionaryWithDictionary: [[UITabBarItem appearance] titleTextAttributesForState:UIControlStateNormal]];
     [attributes setValue:[UIFont fontWithName:@"Cantarell" size:10] forKey:NSFontAttributeName];
     [[UITabBarItem appearance] setTitleTextAttributes:attributes forState:UIControlStateNormal];
@@ -22,13 +35,25 @@
     // Override point for customization after application launch.
     return YES;
 }
--(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+/*-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
     UIApplicationState state = [application applicationState];
     if(state == UIApplicationStateActive){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Reminder" message:notification.alertBody delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+}*/
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
