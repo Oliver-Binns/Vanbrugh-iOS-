@@ -688,7 +688,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Freshers;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "46511786-378d-4ec5-8da1-a3c77b7f5e69";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vanbrugh Freshers 2014/Vanbrugh Freshers 2014-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -701,8 +701,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Oliver Binns (8AUXDPT547)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oliver Binns (8AUXDPT547)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -715,7 +715,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Freshers;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "46511786-378d-4ec5-8da1-a3c77b7f5e69";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vanbrugh Freshers 2014/Vanbrugh Freshers 2014-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
