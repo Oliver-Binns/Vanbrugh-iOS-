@@ -39,7 +39,8 @@
              [self saveFileWithName:@"faq.txt" andContent:content];
          }
          
-         content = [self getFile:@"discounts.txt"];
+         content = [self getFile:@"discounts-v1_1.txt"];
+         NSLog(@"1: %@", content);
          if(content != nil){
              [self saveFileWithName:@"discounts.txt" andContent:content];
          }
@@ -96,7 +97,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSObject *object = [defaults objectForKey:@"block"];
     if(object != nil){ //if default block has already been set!
-        [self performSegueWithIdentifier:@"goToHome" sender:self];
+        [self
+         performSegueWithIdentifier:@"goToHome" sender:self];
     }
     else{
         [self performSegueWithIdentifier:@"goToPicker" sender:self];

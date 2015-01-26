@@ -93,10 +93,12 @@ Event *thisEvent;
     
     NSMutableArray *dayEvents = [[NSMutableArray alloc] init];
     NSArray *myEvent = [myEvents[0] componentsSeparatedByString:@";"];
+    
     NSInteger dayDifference = [self daysBetweenDate:firstDate andDate:[NSDate dateWithTimeIntervalSince1970:[myEvent[3] doubleValue]]];
     
     for(int i = 0; i < [myEvents count]; i++){
         myEvent = [myEvents[i] componentsSeparatedByString:@";"];
+        
         if([self daysBetweenDate:firstDate andDate:[NSDate dateWithTimeIntervalSince1970:[myEvent[3] doubleValue]]] < 0){
 			
         }
