@@ -43,7 +43,6 @@
 		A72358371A6FF29000985875 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72358361A6FF29000985875 /* CFNetwork.framework */; };
 		A72358391A6FF2AB00985875 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72358381A6FF2AB00985875 /* MobileCoreServices.framework */; };
 		A723583B1A6FF2BB00985875 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A723583A1A6FF2BB00985875 /* Security.framework */; };
-		A723583D1A6FF2C400985875 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A723583C1A6FF2C400985875 /* StoreKit.framework */; };
 		A723583F1A6FF2EA00985875 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A723583E1A6FF2EA00985875 /* libsqlite3.dylib */; };
 		A72358441A6FF94A00985875 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A712580C1970133100C5CAA4 /* OpenGLES.framework */; };
 		A72358491A6FF9FA00985875 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A723582A1A6FF27000985875 /* Bolts.framework */; };
@@ -57,6 +56,7 @@
 		A7729E11196C9D9A007AD4A8 /* disco.png in Resources */ = {isa = PBXBuildFile; fileRef = A7729E10196C9D9A007AD4A8 /* disco.png */; };
 		A7729E13196C9F1A007AD4A8 /* barquiz.png in Resources */ = {isa = PBXBuildFile; fileRef = A7729E12196C9F1A007AD4A8 /* barquiz.png */; };
 		A78E784919891B2400681333 /* AdrianHoran-OffCampus.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E784619891B2400681333 /* AdrianHoran-OffCampus.png */; };
+		A78E7B071B27AB8100687811 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E7B061B27AB8100687811 /* SafariServices.framework */; };
 		A796BEEE195C74B000A70D27 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = A796BEED195C74B000A70D27 /* Event.m */; };
 		A7A00D7D199E572E0055C62F /* ComingSoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7A00D7B199E572E0055C62F /* ComingSoon.jpg */; };
 		A7A00D7E199E572E0055C62F /* ComingSoonSTYCs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7A00D7C199E572E0055C62F /* ComingSoonSTYCs.jpg */; };
@@ -143,7 +143,6 @@
 		A72358361A6FF29000985875 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A72358381A6FF2AB00985875 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A723583A1A6FF2BB00985875 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		A723583C1A6FF2C400985875 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A723583E1A6FF2EA00985875 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A72358401A6FF8DD00985875 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A72358421A6FF91900985875 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -156,6 +155,7 @@
 		A7729E10196C9D9A007AD4A8 /* disco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disco.png; sourceTree = "<group>"; };
 		A7729E12196C9F1A007AD4A8 /* barquiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barquiz.png; sourceTree = "<group>"; };
 		A78E784619891B2400681333 /* AdrianHoran-OffCampus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AdrianHoran-OffCampus.png"; path = "images/STYCImages/AdrianHoran-OffCampus.png"; sourceTree = "<group>"; };
+		A78E7B061B27AB8100687811 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		A796BEEC195C74B000A70D27 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
 		A796BEED195C74B000A70D27 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
 		A7A00D7B199E572E0055C62F /* ComingSoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ComingSoon.jpg; path = images/PlaceholderImages/ComingSoon.jpg; sourceTree = "<group>"; };
@@ -191,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78E7B071B27AB8100687811 /* SafariServices.framework in Frameworks */,
 				A723584E1A6FFB7300985875 /* Accounts.framework in Frameworks */,
 				A72358351A6FF28800985875 /* AudioToolbox.framework in Frameworks */,
 				A71257FB197012DE00C5CAA4 /* AVFoundation.framework in Frameworks */,
@@ -214,7 +215,6 @@
 				A712580F1970133B00C5CAA4 /* QuartzCore.framework in Frameworks */,
 				A723583B1A6FF2BB00985875 /* Security.framework in Frameworks */,
 				A723584D1A6FFB4E00985875 /* Social.framework in Frameworks */,
-				A723583D1A6FF2C400985875 /* StoreKit.framework in Frameworks */,
 				A71258111970134500C5CAA4 /* SystemConfiguration.framework in Frameworks */,
 				A70ABA3D1945B9EA00D05DC4 /* UIKit.framework in Frameworks */,
 			);
@@ -255,11 +255,11 @@
 		A70ABA371945B9EA00D05DC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A78E7B061B27AB8100687811 /* SafariServices.framework */,
 				A723584C1A6FFB4E00985875 /* Social.framework */,
 				A72358421A6FF91900985875 /* libz.1.1.3.dylib */,
 				A72358401A6FF8DD00985875 /* Accounts.framework */,
 				A723583E1A6FF2EA00985875 /* libsqlite3.dylib */,
-				A723583C1A6FF2C400985875 /* StoreKit.framework */,
 				A723583A1A6FF2BB00985875 /* Security.framework */,
 				A72358381A6FF2AB00985875 /* MobileCoreServices.framework */,
 				A72358361A6FF29000985875 /* CFNetwork.framework */,
@@ -466,6 +466,11 @@
 				TargetAttributes = {
 					A70ABA341945B9EA00D05DC4 = {
 						DevelopmentTeam = Z86DH46P79;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					A70ABA581945B9EA00D05DC4 = {
 						TestTargetID = A70ABA341945B9EA00D05DC4;
@@ -688,7 +693,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Freshers;
-				PROVISIONING_PROFILE = "46511786-378d-4ec5-8da1-a3c77b7f5e69";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vanbrugh Freshers 2014/Vanbrugh Freshers 2014-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -715,7 +720,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Freshers;
-				PROVISIONING_PROFILE = "46511786-378d-4ec5-8da1-a3c77b7f5e69";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vanbrugh Freshers 2014/Vanbrugh Freshers 2014-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

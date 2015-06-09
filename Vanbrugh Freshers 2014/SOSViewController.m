@@ -8,7 +8,10 @@
 
 #import "SOSViewController.h"
 
-@interface SOSViewController ()
+
+@interface SOSViewController ()<SFSafariViewControllerDelegate>
+
+@property SFSafariViewController *VC;
 
 @end
 
@@ -133,9 +136,19 @@
 }
 
 - (IBAction)goToBuses:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://UOYB.us"]];
-    
+    if([SFSafariViewController class] == nil) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://UOYB.us"]];
+    }
+    else{
+        self.VC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:@"http://UOYB.us"]];
+        self.VC.delegate = self;
+        [self presentViewController:self.VC animated:YES completion:nil];
+    }
 }
+-(void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller{
+    [self.VC dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)gotoWebsite:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.vanbrugh-college.co.uk"]];
 }

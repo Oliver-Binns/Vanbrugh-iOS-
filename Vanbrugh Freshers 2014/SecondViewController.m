@@ -112,6 +112,7 @@ Event *thisEvent;
 					[dayEvents removeAllObjects];
 				}
 			}
+            NSLog(@"%@", myEvent[0]);
 			Event *myEventObject = [[Event alloc] init];
 			[myEventObject setName:myEvent[0]];
 			[myEventObject setLocation:myEvent[1]];
